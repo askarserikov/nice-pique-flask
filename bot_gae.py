@@ -138,7 +138,7 @@ def webhook_handler():
         update = telegram.Update.de_json(request.get_json(force=True), bot)
 
         chat_id = update.message.chat.id
-
+        print("chat_id = " + chat_id)
         # Telegram understands UTF-8, so encode text for unicode compatibility
         text = update.message.text.encode('utf-8')
 
@@ -166,3 +166,7 @@ def set_webhook():
 @app.route('/')
 def index():
     return '.'
+
+
+if __name__ == '__main__':
+      app.run(host='0.0.0.0', port=8080)
