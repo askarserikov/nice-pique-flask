@@ -11,3 +11,5 @@ libraries:
   version: "2.5.2"
 - name: ssl
   version: latest
+- name: PIL
+  version: latest
