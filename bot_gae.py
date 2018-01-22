@@ -141,15 +141,16 @@ def webhook_handler():
         print("chat_id = " + chat_id)
         # Telegram understands UTF-8, so encode text for unicode compatibility
         text = update.message.text.encode('utf-8')
-
+        '''
         get_flickr_credentials()
         photos = get_favorites_list()
         photo = get_random_photo(photos)
         title = update.message.text
         pique = draw_image(photo, title)
         pique.save('image.png')
-        
-        bot.send_photo(chat_id=chat_id, photo=open('image.png', 'rb'))
+        '''
+        #bot.send_photo(chat_id=chat_id, photo=open('image.png', 'rb'))
+        bot.send_message(chat_id=chat_id, text)
 
     return 'ok'
 
