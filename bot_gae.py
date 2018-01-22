@@ -148,7 +148,7 @@ def webhook_handler():
         pique.save('image.png')
         '''
         #bot.send_photo(chat_id=chat_id, photo=open('image.png', 'rb'))
-        bot.send_message(chat_id=chat_id, text)
+        bot.send_message(chat_id=chat_id, text=text)
 
     return 'ok'
 
