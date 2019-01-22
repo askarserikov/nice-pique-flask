@@ -11,7 +11,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 global bot
-bot = telegram.Bot(token='475690808:AAEMldQw49BYxuvvBZ7ttKiL0d75Bsgbs4U')
+bot = telegram.Bot(token='Put Your Token')
 
 def get_flickr_credentials():
     config = ConfigParser()
@@ -129,7 +129,7 @@ def draw_image(photo, title):
     return mphoto
 
 
-@app.route('/475690808:AAEMldQw49BYxuvvBZ7ttKiL0d75Bsgbs4Uhook', methods=['POST'])
+@app.route('/BOTID_hook', methods=['POST'])
 def webhook_handler():
     if request.method == "POST":
         # retrieve the message in JSON and then transform it to Telegram object
